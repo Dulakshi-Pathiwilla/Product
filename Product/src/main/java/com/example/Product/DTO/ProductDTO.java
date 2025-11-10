@@ -25,35 +25,10 @@ public class ProductDTO {
     @Min(value = 1, message="Price can only be positive")
     private double price;
 
-    public String getProductName() {
-        return productName;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
+    public ProductDTO(String name,String type,int count, double pricing){
+        this.productName = name;
+        this.category = type;
+        this.quantity = count;
+        this.price = pricing;
     }
 }
