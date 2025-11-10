@@ -22,3 +22,4 @@ public class ProductController {
         return productRepository.findByCategoryIgnoreCase(category);
     }
 }
+
