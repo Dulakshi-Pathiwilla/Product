@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import org.antlr.v4.runtime.misc.NotNull;
 
 
-@AllArgsConstructor
+
 @NoArgsConstructor
 @Data
 public class ProductDTO {
