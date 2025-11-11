@@ -5,30 +5,22 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.antlr.v4.runtime.misc.NotNull;
-
-
 
 @NoArgsConstructor
+@AllArgsConstructor
 @Data
 public class ProductDTO {
 
-    @NotBlank(message = "Product Name cannot be empty")
+    @NotBlank(message="Product Name cannot be empty.")
     private String productName;
 
-    @NotBlank(message = "Product Category cannot be empty")
+    @NotBlank(message="Category cannot be empty.")
     private String category;
 
-    @Min(value = 1, message="Quantity can only be positive")
-    private int quantity;
-
-    @Min(value = 1, message="Price can only be positive")
+    @Min(value=1,message = "Price should be at least one")
     private double price;
 
-    public ProductDTO(String name,String type,int count, double pricing){
-        this.productName = name;
-        this.category = type;
-        this.quantity = count;
-        this.price = pricing;
-    }
+    @Min(value=1,message="Amount should be greater than 1")
+    private int amount;
+
 }

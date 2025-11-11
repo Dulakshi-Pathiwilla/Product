@@ -1,17 +1,13 @@
 package com.example.Product.Service;
 
+import com.example.Product.DTO.ProductDTO;
 import com.example.Product.Entity.Product;
-import com.example.Product.Repository.ProductRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-public class ProductService {
-
-    @Autowired
-    private ProductRepository productRepository;
-
-    public List<Product> findByCategoryIgnoreCase(String category){
-        return productRepository.findByCategoryIgnoreCase(category);
-    }
+public interface ProductService {
+    ProductDTO addProduct(ProductDTO productDTO);
+    List<ProductDTO>  getAllProducts();
+    List<ProductDTO> searchProducts(String productName);
+    void deleteProductByName(String productName);
 }
